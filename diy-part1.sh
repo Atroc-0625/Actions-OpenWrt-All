@@ -1,6 +1,6 @@
 #!/bin/bash
 #=============================================================
-# https://github.com/Atroc-0625/Actions-OpenWrt
+# https://github.com/Atroc-0625/Actions-OpenWrt-All
 # File name: diy-part1.sh
 # Description: OpenWrt DIY script part 1 (Before Update feeds)
 # Lisence: MIT
@@ -9,6 +9,7 @@
 
 # Uncomment a feed source
 sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
+sed -i '$a src-git diy1 https://github.com/xiaorouji/openwrt-passwall.git;main' feeds.conf.default
 git clone https://github.com/sypopo/luci-theme-atmaterial.git package/lean/luci-theme-atmaterial
 #sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
 #sed -i 's/luci-theme-bootstrap/luci-theme-atmaterial/g' feeds/luci/collections/luci/Makefile
