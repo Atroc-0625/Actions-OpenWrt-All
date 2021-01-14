@@ -1,6 +1,6 @@
 #!/bin/bash
 #============================================================
-# https://github.com/Atroc-0625/Actions-OpenWrt
+# https://github.com/Atroc-0625/Actions-OpenWrt-All
 # File name: diy-part2.sh
 # Description: OpenWrt DIY script part 2 (After Update feeds)
 # Lisence: MIT
@@ -24,7 +24,7 @@ sed -i '/uci commit system/i\uci set system.@system[0].hostname=Atroc-x86' packa
 #git clone https://github.com/jerrykuku/luci-app-vssr package/diy-packages/helloworld/luci-app-vssr
 
 # 获取passwall
-#git clone -b 3.6-40 https://github.com/liuran001/luci-app-passwall package/diy-packages/passwall
+#git clone https://github.com/Lienol/openwrt-package.git package/diy-packages
 
 # 获取Lienol-package
 #git clone https://github.com/Lienol/openwrt-package package/diy-packages/lienol
